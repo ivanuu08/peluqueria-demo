@@ -1,0 +1,550 @@
+/* ═══════════════════════════════════════════════════════════
+   ÁUREO STUDIO — Panel de Administración
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Login ───────────────────────────────────────────────── */
+.login-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.login-card {
+    background: var(--negro-card);
+    border: 1px solid rgba(201, 168, 76, .15);
+    border-radius: var(--radio);
+    padding: 48px 40px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-card h1 {
+    font-family: var(--font-titulo);
+    font-size: 2rem;
+    color: var(--dorado);
+    margin-bottom: 8px;
+}
+
+.login-card p {
+    color: var(--gris);
+    margin-bottom: 32px;
+    font-size: .9rem;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 14px 18px;
+    background: var(--negro);
+    border: 1px solid rgba(201, 168, 76, .2);
+    border-radius: var(--radio);
+    color: var(--blanco);
+    font-family: var(--font-texto);
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-card input:focus {
+    outline: none;
+    border-color: var(--dorado);
+}
+
+.login-error {
+    color: var(--rojo);
+    font-size: .85rem;
+    margin-bottom: 16px;
+    display: none;
+}
+
+/* ── Panel principal ─────────────────────────────────────── */
+.admin-panel {
+    display: none;
+}
+
+.admin-panel.visible {
+    display: block;
+}
+
+/* Header admin */
+.admin-header {
+    background: var(--negro-card);
+    border-bottom: 1px solid rgba(201, 168, 76, .15);
+    padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.admin-header .contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.admin-logo {
+    font-family: var(--font-titulo);
+    font-size: 1.3rem;
+    color: var(--dorado);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.admin-logo span {
+    color: var(--blanco);
+    font-weight: 400;
+    font-size: .85rem;
+    margin-left: 12px;
+    letter-spacing: 0;
+}
+
+.btn-cerrar-sesion {
+    background: none;
+    border: 1px solid rgba(201, 168, 76, .3);
+    color: var(--blanco-suave);
+    padding: 8px 20px;
+    border-radius: var(--radio);
+    font-family: var(--font-texto);
+    font-size: .85rem;
+    cursor: pointer;
+    transition: all var(--transicion);
+}
+
+.btn-cerrar-sesion:hover {
+    border-color: var(--rojo);
+    color: var(--rojo);
+}
+
+/* ── Controles superiores ────────────────────────────────── */
+.admin-controles {
+    padding: 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.nav-fecha {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-fecha button {
+    background: var(--negro-card);
+    border: 1px solid rgba(201, 168, 76, .2);
+    color: var(--blanco);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all var(--transicion);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-fecha button:hover {
+    border-color: var(--dorado);
+    color: var(--dorado);
+}
+
+.nav-fecha .fecha-actual {
+    font-family: var(--font-titulo);
+    font-size: 1.2rem;
+    min-width: 200px;
+    text-align: center;
+}
+
+.btn-hoy {
+    background: none;
+    border: 1px solid var(--dorado);
+    color: var(--dorado);
+    padding: 6px 16px;
+    border-radius: var(--radio);
+    font-family: var(--font-texto);
+    font-size: .8rem;
+    cursor: pointer;
+    transition: all var(--transicion);
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+.btn-hoy:hover {
+    background: var(--dorado);
+    color: var(--negro);
+}
+
+.filtro-profesional {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.filtro-btn {
+    background: var(--negro-card);
+    border: 1px solid rgba(201, 168, 76, .15);
+    color: var(--blanco-suave);
+    padding: 8px 16px;
+    border-radius: var(--radio);
+    font-family: var(--font-texto);
+    font-size: .8rem;
+    cursor: pointer;
+    transition: all var(--transicion);
+}
+
+.filtro-btn:hover {
+    border-color: var(--dorado);
+}
+
+.filtro-btn.activo {
+    background: var(--dorado);
+    color: var(--negro);
+    border-color: var(--dorado);
+}
+
+/* ── Toggle vista ────────────────────────────────────────── */
+.vista-toggle {
+    display: flex;
+    gap: 4px;
+    background: var(--negro-card);
+    border-radius: var(--radio);
+    padding: 4px;
+    border: 1px solid rgba(201, 168, 76, .1);
+}
+
+.vista-btn {
+    background: none;
+    border: none;
+    color: var(--gris);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-family: var(--font-texto);
+    font-size: .8rem;
+    cursor: pointer;
+    transition: all var(--transicion);
+}
+
+.vista-btn.activo {
+    background: rgba(201, 168, 76, .15);
+    color: var(--dorado);
+}
+
+/* ── Resumen del día ─────────────────────────────────────── */
+.resumen-dia {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.resumen-card {
+    background: var(--negro-card);
+    border: 1px solid rgba(201, 168, 76, .1);
+    border-radius: var(--radio);
+    padding: 20px 24px;
+    text-align: center;
+}
+
+.resumen-card .numero {
+    font-family: var(--font-titulo);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--dorado);
+}
+
+.resumen-card .etiqueta {
+    font-size: .8rem;
+    color: var(--gris);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4px;
+}
+
+/* ── Vista diaria ────────────────────────────────────────── */
+.citas-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cita-card {
+    background: var(--negro-card);
+    border: 1px solid rgba(201, 168, 76, .1);
+    border-radius: var(--radio);
+    padding: 20px 24px;
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    gap: 20px;
+    align-items: center;
+    transition: all var(--transicion);
+    border-left: 3px solid var(--dorado);
+}
+
+.cita-card.completada {
+    border-left-color: var(--verde);
+    opacity: .7;
+}
+
+.cita-card.cancelada {
+    border-left-color: var(--rojo);
+    opacity: .4;
+}
+
+.cita-hora {
+    font-family: var(--font-titulo);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--dorado);
+}
+
+.cita-info h4 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.cita-info p {
+    font-size: .85rem;
+    color: var(--gris);
+}
+
+.cita-info .profesional-tag {
+    display: inline-block;
+    background: rgba(201, 168, 76, .1);
+    color: var(--dorado);
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: .75rem;
+    margin-top: 6px;
+}
+
+.cita-acciones {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.cita-acciones button {
+    padding: 8px 14px;
+    border-radius: var(--radio);
+    font-family: var(--font-texto);
+    font-size: .75rem;
+    cursor: pointer;
+    transition: all var(--transicion);
+    border: 1px solid;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+.btn-completar {
+    background: rgba(76, 175, 80, .1);
+    border-color: rgba(76, 175, 80, .3);
+    color: var(--verde);
+}
+
+.btn-completar:hover {
+    background: var(--verde);
+    color: #fff;
+}
+
+.btn-cancelar {
+    background: rgba(231, 76, 60, .1);
+    border-color: rgba(231, 76, 60, .3);
+    color: var(--rojo);
+}
+
+.btn-cancelar:hover {
+    background: var(--rojo);
+    color: #fff;
+}
+
+/* ── Vista semanal ───────────────────────────────────────── */
+.vista-semanal {
+    display: none;
+    overflow-x: auto;
+}
+
+.vista-semanal.visible {
+    display: block;
+}
+
+.vista-diaria {
+    display: block;
+}
+
+.vista-diaria.oculta {
+    display: none;
+}
+
+.semana-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+    min-width: 900px;
+}
+
+.semana-dia {
+    background: var(--negro-card);
+    border: 1px solid rgba(201, 168, 76, .1);
+    border-radius: var(--radio);
+    padding: 16px;
+    min-height: 200px;
+}
+
+.semana-dia-header {
+    text-align: center;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(201, 168, 76, .1);
+}
+
+.semana-dia-header .dia-nombre {
+    font-size: .75rem;
+    color: var(--gris);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.semana-dia-header .dia-numero {
+    font-family: var(--font-titulo);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.semana-dia-header.hoy .dia-numero {
+    color: var(--dorado);
+}
+
+.semana-cita {
+    background: var(--negro);
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    font-size: .8rem;
+    border-left: 2px solid var(--dorado);
+}
+
+.semana-cita.completada {
+    border-left-color: var(--verde);
+    opacity: .6;
+}
+
+.semana-cita.cancelada {
+    border-left-color: var(--rojo);
+    opacity: .4;
+}
+
+.semana-cita .s-hora {
+    color: var(--dorado);
+    font-weight: 600;
+}
+
+.semana-cita .s-cliente {
+    margin-top: 2px;
+}
+
+.semana-cita .s-servicio {
+    color: var(--gris);
+    font-size: .75rem;
+}
+
+/* ── Sin citas ───────────────────────────────────────────── */
+.sin-citas {
+    text-align: center;
+    padding: 60px 24px;
+    color: var(--gris);
+}
+
+.sin-citas svg {
+    width: 48px;
+    height: 48px;
+    stroke: rgba(201, 168, 76, .3);
+    fill: none;
+    stroke-width: 1.5;
+    margin-bottom: 16px;
+}
+
+/* ── Confirm dialog ──────────────────────────────────────── */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease;
+}
+
+.modal-overlay.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-box {
+    background: var(--negro-card);
+    border: 1px solid rgba(201, 168, 76, .2);
+    border-radius: var(--radio);
+    padding: 32px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+
+.modal-box h3 {
+    font-family: var(--font-titulo);
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.modal-box p {
+    color: var(--gris);
+    font-size: .9rem;
+    margin-bottom: 24px;
+}
+
+.modal-acciones {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+/* ── Responsive admin ────────────────────────────────────── */
+@media (max-width: 768px) {
+    .admin-controles {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-fecha {
+        justify-content: center;
+    }
+
+    .filtro-profesional {
+        justify-content: center;
+    }
+
+    .resumen-dia {
+        grid-template-columns: 1fr;
+    }
+
+    .cita-card {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .cita-acciones {
+        justify-content: flex-start;
+    }
+
+    .admin-header .contenedor {
+        flex-direction: column;
+        gap: 12px;
+    }
+}

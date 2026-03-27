@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áureo Studio — Panel de Administración</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<!-- ═══════════════ LOGIN ═══════════════ -->
+<div class="login-wrapper" id="loginWrapper">
+    <div class="login-card">
+        <h1>ÁUREO</h1>
+        <p>Panel de administración</p>
+        <input type="email" id="inputEmail" placeholder="Email" autocomplete="email">
+        <input type="password" id="inputPassword" placeholder="Contraseña" autocomplete="current-password" style="margin-top:12px;">
+        <p class="login-error" id="loginError">Email o contraseña incorrectos</p>
+        <button class="btn btn-dorado" style="width:100%;animation:none;opacity:1;" id="btnLogin">Entrar</button>
+    </div>
+</div>
+
+<!-- ═══════════════ PANEL ADMIN ═══════════════ -->
+<div class="admin-panel" id="adminPanel">
+
+    <!-- Header -->
+    <header class="admin-header">
+        <div class="contenedor">
+            <div class="admin-logo">
+                ÁUREO <span>/ Panel de control</span>
+            </div>
+            <button class="btn-cerrar-sesion" id="btnCerrarSesion">Cerrar sesión</button>
+        </div>
+    </header>
+
+    <main style="padding: 0 0 60px;">
+        <div class="contenedor">
+
+            <!-- Controles -->
+            <div class="admin-controles">
+                <!-- Navegación de fecha -->
+                <div class="nav-fecha">
+                    <button id="btnDiaAnterior" aria-label="Día anterior">&#8249;</button>
+                    <span class="fecha-actual" id="fechaActualLabel"></span>
+                    <button id="btnDiaSiguiente" aria-label="Día siguiente">&#8250;</button>
+                    <button class="btn-hoy" id="btnHoy">Hoy</button>
+                </div>
+
+                <!-- Filtro profesional -->
+                <div class="filtro-profesional" id="filtroProfesional">
+                    <button class="filtro-btn activo" data-id="todos">Todos</button>
+                    <!-- Se rellenan dinámicamente -->
+                </div>
+
+                <!-- Toggle vista -->
+                <div class="vista-toggle">
+                    <button class="vista-btn activo" id="btnVistaDia" data-vista="dia">Día</button>
+                    <button class="vista-btn" id="btnVistaSemana" data-vista="semana">Semana</button>
+                </div>
+            </div>
+
+            <!-- Resumen del día -->
+            <div class="resumen-dia" id="resumenDia">
+                <div class="resumen-card">
+                    <div class="numero" id="totalCitas">—</div>
+                    <div class="etiqueta">Total hoy</div>
+                </div>
+                <div class="resumen-card">
+                    <div class="numero" id="citasPendientes" style="color:var(--dorado)">—</div>
+                    <div class="etiqueta">Pendientes</div>
+                </div>
+                <div class="resumen-card">
+                    <div class="numero" id="citasCompletadas" style="color:var(--verde)">—</div>
+                    <div class="etiqueta">Completadas</div>
+                </div>
+            </div>
+
+            <!-- Vista diaria -->
+            <div class="vista-diaria" id="vistaDiaria">
+                <div class="citas-lista" id="citasLista">
+                    <!-- Se rellena dinámicamente -->
+                </div>
+            </div>
+
+            <!-- Vista semanal -->
+            <div class="vista-semanal" id="vistaSemanal">
+                <div class="semana-grid" id="semanaGrid">
+                    <!-- Se rellena dinámicamente -->
+                </div>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+<!-- Modal de confirmación -->
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box">
+        <h3>Cancelar cita</h3>
+        <p>¿Estás seguro de que quieres cancelar esta cita? Esta acción no se puede deshacer.</p>
+        <div class="modal-acciones">
+            <button class="btn btn-outline btn-sm" id="btnModalNo">No, volver</button>
+            <button class="btn btn-sm" style="background:var(--rojo);color:#fff;border:none;" id="btnModalSi">Sí, cancelar</button>
+        </div>
+    </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<!-- Scripts -->
+<script src="node_modules/@supabase/supabase-js/dist/umd/supabase.js"></script>
+<script src="js/config.js"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/admin.js"></script>
+
+</body>
+</html>

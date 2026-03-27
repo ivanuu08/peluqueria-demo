@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áureo Studio — Donde el estilo se convierte en arte</title>
+    <meta name="description" content="Peluquería de lujo en San Pedro del Pinatar. Corte, coloración, mechas, keratina y más. Reserva tu cita online.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ═══════════════ NAVBAR ═══════════════ -->
+<nav class="navbar" id="navbar">
+    <div class="contenedor">
+        <a href="#" class="navbar-logo">ÁUREO</a>
+        <ul class="navbar-links" id="navLinks">
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#equipo">Equipo</a></li>
+            <li><a href="#reservas">Reservar</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <span class="hero-badge">Peluquería de lujo</span>
+        <h1><span class="dorado">Áureo</span> Studio</h1>
+        <p class="hero-tagline">Donde el estilo se convierte en arte</p>
+        <a href="#reservas" class="btn btn-dorado">Reservar cita</a>
+    </div>
+</section>
+
+<!-- ═══════════════ SERVICIOS ═══════════════ -->
+<section class="seccion servicios" id="servicios">
+    <div class="contenedor">
+        <h2 class="titulo-seccion reveal">Nuestros Servicios</h2>
+        <div class="linea-dorada reveal"></div>
+        <p class="subtitulo-seccion reveal">Cada detalle importa. Ofrecemos una experiencia personalizada con productos de la más alta calidad.</p>
+        <div class="servicios-grid">
+            <!-- Corte y peinado -->
+            <div class="servicio-card reveal">
+                <div class="servicio-icono">
+                    <svg viewBox="0 0 24 24"><path d="M6 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M18 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M6 18L18 6M18 18L12 12"/><path d="M18 6L6 18"/></svg>
+                </div>
+                <h3>Corte y peinado</h3>
+                <p>Corte personalizado con lavado y peinado profesional</p>
+                <div class="servicio-precio">35€</div>
+            </div>
+            <!-- Coloración completa -->
+            <div class="servicio-card reveal">
+                <div class="servicio-icono">
+                    <svg viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="4"/></svg>
+                </div>
+                <h3>Coloración completa</h3>
+                <p>Coloración integral con productos premium</p>
+                <div class="servicio-precio">90€</div>
+            </div>
+            <!-- Mechas y balayage -->
+            <div class="servicio-card reveal">
+                <div class="servicio-icono">
+                    <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                </div>
+                <h3>Mechas y balayage</h3>
+                <p>Técnica de iluminación natural con efecto degradado</p>
+                <div class="servicio-precio">120€</div>
+            </div>
+            <!-- Tratamiento keratina -->
+            <div class="servicio-card reveal">
+                <div class="servicio-icono">
+                    <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <h3>Tratamiento keratina</h3>
+                <p>Alisado y nutrición profunda con keratina brasileña</p>
+                <div class="servicio-precio">80€</div>
+            </div>
+            <!-- Barba y perfilado -->
+            <div class="servicio-card reveal">
+                <div class="servicio-icono">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M3 21v-2a7 7 0 0 1 7-7h4a7 7 0 0 1 7 7v2"/></svg>
+                </div>
+                <h3>Barba y perfilado</h3>
+                <p>Recorte, perfilado y cuidado de barba con navaja</p>
+                <div class="servicio-precio">25€</div>
+            </div>
+            <!-- Novias y eventos -->
+            <div class="servicio-card reveal">
+                <div class="servicio-icono">
+                    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </div>
+                <h3>Novias y eventos</h3>
+                <p>Peinado y maquillaje completo para tu día especial</p>
+                <div class="servicio-precio"><span>desde </span>150€</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════ EQUIPO ═══════════════ -->
+<section class="seccion equipo" id="equipo">
+    <div class="contenedor">
+        <h2 class="titulo-seccion reveal">Nuestro Equipo</h2>
+        <div class="linea-dorada reveal"></div>
+        <p class="subtitulo-seccion reveal">Profesionales apasionados que transforman tu imagen con talento y dedicación.</p>
+        <div class="equipo-grid">
+            <div class="equipo-card reveal">
+                <div class="equipo-foto">SR</div>
+                <h3>Sofía Reyes</h3>
+                <p class="equipo-especialidad">Coloración y balayage</p>
+                <p class="equipo-experiencia">8 años de experiencia</p>
+            </div>
+            <div class="equipo-card reveal">
+                <div class="equipo-foto">MN</div>
+                <h3>Marco Navarro</h3>
+                <p class="equipo-especialidad">Corte masculino y barba</p>
+                <p class="equipo-experiencia">6 años de experiencia</p>
+            </div>
+            <div class="equipo-card reveal">
+                <div class="equipo-foto">EV</div>
+                <h3>Elena Vidal</h3>
+                <p class="equipo-especialidad">Novias y eventos</p>
+                <p class="equipo-experiencia">10 años de experiencia</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════ RESERVAS ═══════════════ -->
+<section class="seccion reservas" id="reservas">
+    <div class="contenedor">
+        <h2 class="titulo-seccion reveal">Reserva tu cita</h2>
+        <div class="linea-dorada reveal"></div>
+        <p class="subtitulo-seccion reveal">Elige tu servicio, profesional y horario en unos pocos pasos.</p>
+
+        <!-- Indicador de progreso -->
+        <div class="progreso" id="progreso">
+            <div class="progreso-paso">
+                <div class="progreso-circulo activo" data-paso="1">1</div>
+            </div>
+            <div class="progreso-linea"></div>
+            <div class="progreso-paso">
+                <div class="progreso-circulo" data-paso="2">2</div>
+            </div>
+            <div class="progreso-linea"></div>
+            <div class="progreso-paso">
+                <div class="progreso-circulo" data-paso="3">3</div>
+            </div>
+            <div class="progreso-linea"></div>
+            <div class="progreso-paso">
+                <div class="progreso-circulo" data-paso="4">4</div>
+            </div>
+        </div>
+
+        <!-- Paso 1: Servicio -->
+        <div class="paso activo" id="paso1">
+            <h3 class="paso-titulo">Elige tu servicio</h3>
+            <div class="servicios-seleccion" id="serviciosSeleccion">
+                <!-- Se llena dinámicamente -->
+            </div>
+            <div class="paso-nav">
+                <div></div>
+                <button class="btn btn-dorado btn-sm" id="btnPaso1Siguiente" disabled>Siguiente</button>
+            </div>
+        </div>
+
+        <!-- Paso 2: Profesional -->
+        <div class="paso" id="paso2">
+            <h3 class="paso-titulo">Elige tu profesional</h3>
+            <div class="profesionales-seleccion" id="profesionalesSeleccion">
+                <!-- Se llena dinámicamente -->
+            </div>
+            <div class="paso-nav">
+                <button class="btn btn-outline btn-sm" id="btnPaso2Atras">Atrás</button>
+                <button class="btn btn-dorado btn-sm" id="btnPaso2Siguiente" disabled>Siguiente</button>
+            </div>
+        </div>
+
+        <!-- Paso 3: Fecha y hora -->
+        <div class="paso" id="paso3">
+            <h3 class="paso-titulo">Elige fecha y hora</h3>
+            <div class="fecha-hora-grid">
+                <div class="calendario-wrapper">
+                    <div class="calendario-header">
+                        <button id="calPrev" aria-label="Mes anterior">&#8249;</button>
+                        <h4 id="calMesAnio"></h4>
+                        <button id="calNext" aria-label="Mes siguiente">&#8250;</button>
+                    </div>
+                    <div class="calendario-dias-semana">
+                        <span>Lun</span><span>Mar</span><span>Mié</span>
+                        <span>Jue</span><span>Vie</span><span>Sáb</span><span>Dom</span>
+                    </div>
+                    <div class="calendario-dias" id="calendarioDias">
+                        <!-- Se llena dinámicamente -->
+                    </div>
+                </div>
+                <div class="horas-wrapper">
+                    <h4>Horarios disponibles</h4>
+                    <div id="horasContenido">
+                        <p class="horas-mensaje">Selecciona una fecha para ver los horarios disponibles</p>
+                    </div>
+                </div>
+            </div>
+            <div class="paso-nav">
+                <button class="btn btn-outline btn-sm" id="btnPaso3Atras">Atrás</button>
+                <button class="btn btn-dorado btn-sm" id="btnPaso3Siguiente" disabled>Siguiente</button>
+            </div>
+        </div>
+
+        <!-- Paso 4: Datos personales -->
+        <div class="paso" id="paso4">
+            <h3 class="paso-titulo">Tus datos</h3>
+            <form class="formulario-datos" id="formularioDatos" novalidate>
+                <div class="campo">
+                    <label for="clienteNombre">Nombre completo *</label>
+                    <input type="text" id="clienteNombre" placeholder="Tu nombre y apellidos" required>
+                    <p class="error" id="errorNombre">Introduce tu nombre completo</p>
+                </div>
+                <div class="campo">
+                    <label for="clienteTelefono">Teléfono *</label>
+                    <input type="tel" id="clienteTelefono" placeholder="+34 600 000 000" required>
+                    <p class="error" id="errorTelefono">Introduce un teléfono válido</p>
+                </div>
+                <div class="campo">
+                    <label for="clienteEmail">Email *</label>
+                    <input type="email" id="clienteEmail" placeholder="tu@email.com" required>
+                    <p class="error" id="errorEmail">Introduce un email válido</p>
+                </div>
+                <div class="campo">
+                    <label for="clienteNotas">Notas (opcional)</label>
+                    <textarea id="clienteNotas" placeholder="¿Alguna indicación especial?"></textarea>
+                </div>
+                <div class="paso-nav">
+                    <button type="button" class="btn btn-outline btn-sm" id="btnPaso4Atras">Atrás</button>
+                    <button type="submit" class="btn btn-dorado btn-sm" id="btnConfirmar">Confirmar reserva</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Éxito -->
+        <div class="reserva-exito" id="reservaExito">
+            <div class="exito-icono">&#10003;</div>
+            <h3>¡Reserva confirmada!</h3>
+            <p>Hemos enviado un email de confirmación con los detalles de tu cita.</p>
+            <div class="resumen-cita" id="resumenCita">
+                <!-- Se llena dinámicamente -->
+            </div>
+            <div style="margin-top: 32px;">
+                <a href="#hero" class="btn btn-outline btn-sm" id="btnNuevaReserva">Volver al inicio</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════ CONTACTO ═══════════════ -->
+<section class="seccion contacto" id="contacto">
+    <div class="contenedor">
+        <h2 class="titulo-seccion reveal">Contacto</h2>
+        <div class="linea-dorada reveal"></div>
+        <div class="contacto-grid reveal">
+            <div class="contacto-bloque">
+                <h3>Visítanos</h3>
+                <div class="contacto-item">
+                    <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Calle Mayor 12<br>San Pedro del Pinatar, Murcia</span>
+                </div>
+                <div class="contacto-item">
+                    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <span>+34 968 000 000</span>
+                </div>
+            </div>
+            <div class="contacto-bloque">
+                <h3>Horario</h3>
+                <div class="contacto-item">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <span>Lunes a Sábado<br>9:00 — 20:00<br><br>Domingo: Cerrado</span>
+                </div>
+            </div>
+            <div class="contacto-bloque">
+                <h3>Síguenos</h3>
+                <div class="redes">
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="#" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+                    </a>
+                    <a href="#" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+    <div class="contenedor">
+        <p>&copy; 2026 Áureo Studio. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/reservas.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
